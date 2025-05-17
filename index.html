@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMAGE CAPTIONING</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>IMAGE CAPTIONING</h2>
+
+    <div class="content">
+      <!-- Sol Taraf - Görsel Yükleme Alanı -->
+      <div class="image-box" id="imageBox">
+        <div class="placeholder" id="placeholder">
+          <img src="icon.png" alt="Placeholder Icon" class="icon" />
+          <small>Görsel Yükle</small>
+        </div>
+        <img id="preview" src="" alt="Görsel Önizleme" />
+
+        <!-- Yükleme Progress Bar -->
+        <div class="progress-container" id="progressContainer">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+      </div>
+
+      <!-- Sağ Taraf - Açıklama ve Butonlar -->
+      <div class="right-panel">
+        <div class="caption-box">
+          <div id="caption">Captioning.</div>
+        </div>
+
+        <div class="button-group">
+          <button id="captionButton" onclick="uploadImage()" disabled>Açıklama Oluştur</button>
+          <button id="listenButton" onclick="startListening()" disabled>Dinle</button>
+          <button id="stopButton" onclick="stopSpeaking()" disabled>Durdur</button>
+        </div>
+
+        <!-- Dinleme Progress Bar -->
+        <div class="listen-progress-container">
+          <div class="listen-progress-bar" id="listenProgressBar"></div>
+        </div>
+
+        <div class="spinner" id="spinner"></div>
+      </div>
+    </div>
+
+    <input type="file" id="imageInput" accept="image/*" style="display: none;" />
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
